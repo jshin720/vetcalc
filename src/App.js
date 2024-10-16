@@ -9,15 +9,16 @@ function App() {
 
   return (
     <>
-      <Formpage
-        weight={weight}
-        setWeight={setWeight}
-        convertToggle={convertToggle}
-        setConvertToggle={setConvertToggle}
-      />
-      <h1>
-        {weight}
-      </h1>
+      {convertToggle === false ? 
+        <Formpage
+          weight={weight}
+          setWeight={setWeight}
+          convertToggle={convertToggle}
+          setConvertToggle={setConvertToggle}
+        />
+      : < Resultspage weight={weight}/>
+        
+      }
     </>
   );
 }

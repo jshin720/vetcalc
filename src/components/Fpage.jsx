@@ -4,15 +4,15 @@ export default function FormPage(props) {
   const [weightType, setWeightType] = useState("");
   const { weight, setWeight, convertToggle, setConvertToggle } = props;
 
-  const handleConversion = (e) => {
-    const { name, value } = e.target;
-    console.log(name, value);
-  };
+  // const handleConversion = (e) => {
+  //   setWeightType(e.target.value)
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
-    console.log("wt",weightType);
+    if (weightType === "lb") setWeight(Math.round(weight * 0.45359237) * 100);
+    setConvertToggle(true);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function FormPage(props) {
         <input
           type="number"
           placeholder="Enter Weight"
-          value={weight}
+          defaultValue={ weight === 0 ? null : weight}
           onChange={(e) => setWeight(e.target.value)}
           name="weight"
         />
@@ -31,13 +31,13 @@ export default function FormPage(props) {
           name="weightType"
           defaultValue={weightType || "Select"}
           id="weight-type"
-          // onChange={handleConversion}
+          onChange={(e) => setWeightType(e.target.value)}
         >
           <option value="Select">Select</option>
-          <option value="lb" onChange={(e) => setWeightType(e.target.value)}>
+          <option value="lb" >
             lb
           </option>
-          <option value="kg" onChange={(e) => setWeightType(e.target.value)}>
+          <option value="kg">
             kg
           </option>
         </select>
