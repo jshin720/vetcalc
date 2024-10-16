@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Formpage from "./components/Fpage";
+import Resultspage from "./components/ResultsPage";
 
 function App() {
+  const [weight, setWeight] = useState(0);
+  const [convertToggle, setConvertToggle] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Formpage
+        weight={weight}
+        setWeight={setWeight}
+        convertToggle={convertToggle}
+        setConvertToggle={setConvertToggle}
+      />
+      <h1>
+        {weight}
+      </h1>
+    </>
   );
 }
 
