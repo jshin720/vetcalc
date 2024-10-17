@@ -19,7 +19,7 @@ export default function FormPage(props) {
     <div>
       <h1>starting form</h1>
       <form onSubmit={handleSubmit}>
-        <label>Enter the weight</label>
+        <label>Enter weight</label>
         <input
           type="number"
           placeholder="Enter Weight"
