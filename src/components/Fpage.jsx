@@ -16,7 +16,7 @@ export default function FormPage(props) {
   };
 
   return (
-    <div>
+    <div className="weight-form">
       <h1>starting form</h1>
       <form onSubmit={handleSubmit}>
         <label>Enter weight</label>
