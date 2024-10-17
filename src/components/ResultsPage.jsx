@@ -15,7 +15,7 @@ export default function ResultsPage(props) {
   };
 
   return (
-    < div >
+    <div>
       <h1>{weight}</h1>
       <p>MBW: {Math.ceil(mbw * 100) / 100} Kg</p>
       <p>RER: {rer} Kg</p>
@@ -28,6 +28,6 @@ export default function ResultsPage(props) {
           </span>
         ))}
       </p>
-    </>
+    </div>
   );
 }
