@@ -15,15 +15,15 @@ export default function ResultsPage(props) {
   };
 
   return (
-    <>
+    < div >
       <h1>{weight}</h1>
-      <p>MBW: {Math.ceil(mbw * 100) / 100}</p>
-      <p>RER: {rer}</p>
+      <p>MBW: {Math.ceil(mbw * 100) / 100} Kg</p>
+      <p>RER: {rer} Kg</p>
       <p>
-        Conversion Key:{" "}
+        Conversion Key:{" "} <br/>
         {Object.entries(conversionKey).map(([key, value]) => (
           <span key={key}>
-            {key}: {Math.round(rer * value)}
+            {key}: {Math.round(rer * value)} Kg
             <br />
           </span>
         ))}
