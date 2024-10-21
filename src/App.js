@@ -8,19 +8,18 @@ function App() {
   const [convertToggle, setConvertToggle] = useState(false);
 
   return (
-    <>
-    div
-      {convertToggle === false ? 
+    <div className="form-container">
+      {convertToggle === false ? (
         <Formpage
           weight={weight}
           setWeight={setWeight}
           convertToggle={convertToggle}
           setConvertToggle={setConvertToggle}
         />
-      : < Resultspage weight={weight}/>
-        
-      }
-    </>
+      ) : (
+        <Resultspage weight={weight} />
+      )}
+    </div>
   );
 }
 
