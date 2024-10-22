@@ -8,8 +8,19 @@
 
 .weight-form {
   display: grid;
-  place-content: center;
+  align-items: center;
   border: 2px solid black ;
   height: 50vh ;
   width: 25%;
 }
+
+.form-heading {
+  text-align: center;
+  height: 25%;
+}
+
+.calc-form {
+  display: grid;
+  height: 75%;
+}
+
