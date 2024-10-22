@@ -18,9 +18,9 @@ export default function FormPage(props) {
   return (
     <div className="weight-form">
       <h1 className="form-heading">The Pet Calc</h1>
-      <form onSubmit={handleSubmit} className="calc-form">
-        <label>Enter weight</label>
-        <div className="select-box">
+      <div className="select-box">
+        <form onSubmit={handleSubmit} className="calc-form">
+          <label className="form-label">Enter weight</label>
           <input
             type="number"
             placeholder="Enter Weight"
@@ -31,6 +31,7 @@ export default function FormPage(props) {
           <select
             name="weightType"
             defaultValue={weightType || "Select"}
+            className="select-weight"
             id="weight-type"
             onChange={(e) => setWeightType(e.target.value)}
           >
@@ -38,15 +39,15 @@ export default function FormPage(props) {
             <option value="lb">lb</option>
             <option value="kg">kg</option>
           </select>
-        </div>
-        <button
-          type="submit"
-          class="btn btn-primary"
-          onClick={(e) => handleSubmit}
-        >
-          Submit
-        </button>
-      </form>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            onClick={(e) => handleSubmit}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
