@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function FormPage(props) {
   const [weightType, setWeightType] = useState("");
-  const { weight, setWeight, convertToggle, setConvertToggle } = props;
+  const { weight, setWeight, setConvertToggle } = props;
 
   // const handleConversion = (e) => {
   //   setWeightType(e.target.value)
@@ -17,8 +17,8 @@ export default function FormPage(props) {
 
   return (
     <div className="weight-form">
-      <h1>starting form</h1>
-      <form onSubmit={handleSubmit}>
+      <h1>The Pet Calc</h1>
+      <form onSubmit={handleSubmit} className="calc-form">
         <label>Enter weight</label>
         <input
           type="number"

@@ -13,7 +13,6 @@ function App() {
         <Formpage
           weight={weight}
           setWeight={setWeight}
-          convertToggle={convertToggle}
           setConvertToggle={setConvertToggle}
         />
       ) : (

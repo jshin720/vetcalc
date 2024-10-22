@@ -1,6 +1,15 @@
-.weight-form {
+.form-container {
   display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  border: 2px solid red;
+  height: 100%;
+}
+
+.weight-form {
+  display: grid;
+  place-content: center;
   border: 2px solid black ;
-  height: 50% ;
-  width: 50%;
+  height: 50vh ;
+  width: 25%;
 }
