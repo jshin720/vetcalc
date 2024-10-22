@@ -23,7 +23,7 @@ export default function FormPage(props) {
           <label className="form-label">Enter weight</label>
           <input
             type="number"
-            placeholder="Enter Weight"
+            // placeholder="Enter Weight"
             defaultValue={weight === 0 ? null : weight}
             onChange={(e) => setWeight(e.target.value)}
             name="weight"
