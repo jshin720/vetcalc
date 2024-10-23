@@ -85,8 +85,7 @@
 } */
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
-	top:-12px;
+	top:-30px;
 	font-size:12px;
-	
 }
 

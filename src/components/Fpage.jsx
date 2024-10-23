@@ -20,7 +20,6 @@ export default function FormPage(props) {
       <h1 className="form-heading">The Pet Calc</h1>
       <form onSubmit={handleSubmit} className="calc-form">
         <div className="input-container">
-          <label className="form-label">Enter weight</label>
           <input
             type="number"
             // placeholder="Enter Weight"
@@ -28,6 +27,7 @@ export default function FormPage(props) {
             onChange={(e) => setWeight(e.target.value)}
             name="weight"
           />
+          <label className="form-label">Enter weight</label>
         </div>
         <div className="select-box">
           <select
