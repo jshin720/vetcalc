@@ -26,6 +26,7 @@ export default function FormPage(props) {
             defaultValue={weight === 0 ? null : weight}
             onChange={(e) => setWeight(e.target.value)}
             name="weight"
+            required=""
           />
           <label className="form-label">Enter weight</label>
         </div>
