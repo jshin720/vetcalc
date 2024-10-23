@@ -14,9 +14,13 @@
   width: 25%;
 }
 
-.form-heading {
-  text-align: center;
-  height: 25%;
+.form-heading{
+	/* color:#fff;	 */
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
 }
 
 .calc-form {
@@ -24,84 +28,65 @@
   height: 75%;
 }
 
-.input-container {
-  position: relative;
-  margin-bottom: 25px;
-}
-.input-container label {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-size: 16px;
-  pointer-event: none;
-  transition: all 0.5s ease-in-out;
-}
-.input-container input {
-  border: 0;
-  border-bottom: 1px solid #555;
-  background: transparent;
-  width: 100%;
-  padding: 8px 0 5px 0;
-  font-size: 16px;
-  color: #fff;
-}
-.input-container input:focus {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #e74c3c;
+.input-container{
+	position:relative;
+	margin-bottom:25px;
 }
 
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:green;	
+  pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color: blue;
+}
+
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+
+
+.btn{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+}
+/* .btn:after{
+	content:"";
+	position:absolute;
+	background:rgba(0,0,0,0.50);
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+} */
 .input-container input:focus ~ label,
-.input-container input:valid ~ label {
-  top: -12px;
-  font-size: 12px;
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
 }
 
-.select-box {
-  cursor: pointer;
-  position: relative;
-  max-width: 20em;
-  margin: 5em auto;
-  width: 100%;
-  border: 5px solid green;
-}
-
-.select-weight,
-.select-box {
-  color: #414141;
-  display: block;
-  font: 400 17px/2em "Source Sans Pro", sans-serif;
-}
-
-.select-weight {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  padding: 5px 0;
-  height: 40px;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  background: none transparent;
-  border: 0 none;
-}
-.select-box {
-  background: #ececec;
-}
-
-.select-box {
-  position: relative;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.open .select-box::after {
-  content: "▲";
-}
-.select-box::after {
-  content: "▼";
-  font-size: 12px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 5px 15px;
-  border-left: 5px solid #fff;
-}
